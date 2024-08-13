@@ -1,0 +1,207 @@
+.coinTossDashboardMain {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../../assets/images/dashboardBackground.webp);
+    box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.8);
+    background-repeat: no-repeat;
+    background-position: 100%;
+    background-position: center;
+}
+
+.coinTossDashboardHeader {
+    padding: 10px 30px;
+    font-size: 20px;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+}
+
+.coinTossDashboardTossArea {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    /* perspective: 100px; */
+
+}
+
+.coinTossDashboardTossAreaCoinContainer {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    perspective: 100px;
+    transform-style: preserve-3d;
+    /* transform-origin: center; */
+}
+
+.coinTossDashboardTossAreaCoinHeads {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    /* background-color: grey; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    top: 0;
+    font-size: 25px;
+    /* border: 2px solid red; */
+    background-image: url(../../assets/images/bgRemovedHeads.png);
+    background-repeat: no-repeat;
+    /* background-size: 200px 200px; */
+}
+
+.coinTossDashboardTossAreaCoinTails {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    top: 0;
+    font-size: 25px;
+    backface-visibility: hidden;
+    /* border: 2px solid green; */
+    background-image: url(../../assets/images/bgRemovedTails.png);
+    /* background-size: 200px 200px; */
+    background-repeat: no-repeat;
+}
+
+
+.coinTossDashboardTossAreaCoinContainer:hover {
+    animation: flip 2s 3;
+}
+
+.coinTossDashboardTossArea:hover {
+    animation: move 6s 1;
+}
+
+/* Animation for flipping */
+@keyframes flip {
+
+    0% {
+        transform: rotateX(0);
+    }
+
+    25% {
+        transform: rotateX(-360deg);
+    }
+
+    50% {
+        transform: rotateX(-720deg);
+    }
+
+    75% {
+        transform: rotateX(-1080deg);
+    }
+
+    100% {
+        transform: rotateX(-1440deg);
+    }
+}
+
+@keyframes move {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    35% {
+        transform: translateY(-100px);
+    }
+
+    70% {
+        transform: translateY(-200px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+.coinTossDashboardTossButtonEnabled {
+    background-color: #879bb0;
+    color: white;
+    width: 100px;
+    height: 40px;
+    padding: 4px 6px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    outline: none;
+    border: 1px solid white;
+}
+
+.coinTossDashboardFlip {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0 20px 0;
+}
+
+.coinTossDashboardTossButtonDisabled {
+    background-color: grey;
+    cursor: not-allowed;
+    color: white;
+    width: 100px;
+    height: 40px;
+    padding: 4px 6px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    border: 1px solid white;
+}
+
+.coinTossDashboardCointAreaAndButton {
+    display: flex;
+}
+
+.coinTossDashboardDescriptionAndTossArea {
+    display: flex;
+}
+
+.coinTossDashboardDescription {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.coinTossDashboardDescription img {
+    width: 100px;
+    height: 100px;
+}
+
+.coinTossDashboardDescriptionImgAndText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+}
+
+.coinTossDashboardDescriptionInner {
+    display: flex;
+    justify-content: center;
+}
+
+@media(max-width:1080px) {
+    .coinTossDashboardHeader {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .coinTossDAshboardHeaderCheemsText {
+        width: 100%;
+    }
+}
