@@ -1,5 +1,6 @@
 {
   "name": "cointoss",
+  "homepage": "https://auratus.github.io/cointoss",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
